@@ -6,6 +6,8 @@ import Landing from "./Landing";
 import Login from "./Login";
 import Signup from "./Signup";
 import Upload from "./Upload";
+import History from "./History";
+import Ranking from "./Ranking";
 
 import Results from "./Results";
 
@@ -18,6 +20,8 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/upload" element={<Upload />} />
         <Route path="/results" element={<Results />} />
+        <Route path="/history" element={<History />} />
+        <Route path="/ranking" element={<Ranking />} />
       </Routes>
     </BrowserRouter>
   );
