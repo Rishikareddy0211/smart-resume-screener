@@ -93,7 +93,7 @@ An AI-powered resume screening application that analyzes resumes against a given
                     │  History             │
                     └──────────────────────┘
 
-                    🔄 Application Workflow
+                    Application Workflow
 User creates an account or logs in.
 User uploads one or more resumes.
 User provides the Job Description.
@@ -107,8 +107,6 @@ Analysis results are stored in MongoDB.
 Frontend displays the analysis results.
 Multiple candidates can be compared and ranked.
 Previous analyses can be accessed through Analysis History.
-
-
 🤖 LLM Integration
 
 Google Gemini is used as the Large Language Model for semantic resume screening.
@@ -139,20 +137,17 @@ The model returns structured JSON containing:
     "experience": []
   }
 }
-
-
 Scoring Rules
 Score	Recommendation
 8–10	SHORTLIST
 5–7	REVIEW
 0–4	REJECT
-
-
 📝 LLM Prompt
 
 The core analysis prompt instructs Gemini to compare the resume with the Job Description and return a structured JSON response.
 
 The prompt follows these rules:
+
 1. score must be a number from 0 to 10.
 
 2. matchedSkills:
@@ -188,7 +183,6 @@ Use:
 Do not invent experience, skills, education, internships, certifications, or projects.
 
 Only use information present in the resume.
-
 Structured Output
 
 The structured JSON response makes it easier for the backend to process the AI result and allows the frontend to display each analysis category separately.
@@ -217,10 +211,7 @@ Git
 GitHub
 VS Code
 npm
-
-
-Project Structure
-
+📂 Project Structure
 ResumeAnalyzerFullStack/
 │
 ├── Backend/
@@ -247,9 +238,7 @@ ResumeAnalyzerFullStack/
 │
 ├── .gitignore
 └── README.md
-
-
-Installation and Setup
+⚙️ Installation and Setup
 1. Clone the Repository
 git clone https://github.com/Rishikareddy0211/smart-resume-screener.git
 cd smart-resume-screener
@@ -258,13 +247,19 @@ cd smart-resume-screener
 Navigate to the Backend directory:
 
 cd Backend
+
 Install dependencies:
+
 npm install
+
 Create a .env file inside the Backend directory:
+
 PORT=5000
 MONGODB_URI=your_mongodb_connection_string
 GEMINI_API_KEY=your_gemini_api_key
+
 Start the backend:
+
 node server.js
 
 The backend runs on:
